@@ -23,11 +23,10 @@ gotMessage();
 
 function gotMessage() {
 
-    // We wanna check to make sure page is fully loaded so we can search for elements
+    // We wanna check to make sure page is fully loaded and it's a baseball league so we can search for elements
     var checkExist = setInterval(function() {
-        if (document.getElementsByClassName('scorer__info').length && matchRuleShort(location.href, "https://www.fantrax.com/fantasy/league/*/team/roster*")) {
-            // Page is now fully loaded, don't have to keep checking anymore
-            //console.log("Exists!");
+        if (document.getElementsByClassName('scorer__info').length && matchRuleShort(location.href, "https://www.fantrax.com/fantasy/league/*/team/roster*") && document.querySelector('._ut__head td').innerText == "Hitting") {
+            // Page is now fully loaded, we're on a baseball league page, don't have to keep checking anymore
             clearInterval(checkExist);
 
             // if video player doesn't exist yet, run the code below
