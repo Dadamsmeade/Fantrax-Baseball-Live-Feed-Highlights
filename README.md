@@ -21,6 +21,3 @@ Runs when roster.js sends message to background.js telling it to open a new wind
 
 #### declutter.js: 
 Runs when user is directed to one of the live stream pages (volokit.com). It removes all content except the video stream on the site and also makes the stream full size for better visibility.
-
-#### icons/:
-Holds .png files to be used in content.js and roster.js
